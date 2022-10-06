@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="POL Suite" annotations="JDK" parallel="tests">
+  <test name="SOF">
+    <classes>
+
+ <class name="Tests_SOF_E2E.Tests_SOF_E2E"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="DOB">
+    <classes>
+
+ <class name="Tests_DOB_E2E.Tests_DOB_E2E"/>
+    </classes>
+  </test> 
+
+  <test name="Recharge">
+    <classes>
+
+ <class name="Tests_POL_E2E.Tests_Recharge_E2E"/>
+    </classes>
+  </test> 
+</suite> <!-- Suite -->
