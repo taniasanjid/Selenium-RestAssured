@@ -39,6 +39,7 @@ import org.testng.ITestResult;
 
 import api_Test.API_Create;
 import api_Test.API_List;
+import PageObject.pageObject;
 import dataProviders.ConfigFileReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -65,7 +66,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 		API_Create create_User = new API_Create();
 		API_List api_list = new API_List();
-		
+		pageObject page = new pageObject();
 
 		
 
@@ -139,9 +140,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//strong[normalize-space()='George']")));	
 			
 			
-			String text = driver.findElement(By.xpath("//h1[normalize-space()='Hello ReqRes users!']")).getText();
+			
 
-			Assert.assertEquals(text, "Hello ReqRes users!");
+			Assert.assertEquals(pageObject.getTitle(), "Hello ReqRes users!");
 			
 			
 	
